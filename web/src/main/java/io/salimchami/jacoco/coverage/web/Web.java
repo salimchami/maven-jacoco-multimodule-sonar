@@ -1,9 +1,7 @@
 package io.salimchami.jacoco.coverage.web;
 
 import io.salimchami.jacoco.coverage.domain.Domain;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 public class Web {
 
     public void coveredByUnitTest() {
