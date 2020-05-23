@@ -14,7 +14,8 @@
     <name>Web module</name>
 
     <properties>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../${project.xmlReportPaths}</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../${project.xmlReportPaths}
+        </sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
     <dependencies>
@@ -25,15 +26,22 @@
         </dependency>
     </dependencies>
     <build>
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <version>2.3.0.RELEASE</version>-->
-<!--                <configuration>-->
-<!--                    <mainClass>io.salimchami.jacoco.coverage.web.MavenAggregateApplication</mainClass>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <configuration>
+                    <mainClass>io.salimchami.jacoco.coverage.web.MavenAggregateApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>
