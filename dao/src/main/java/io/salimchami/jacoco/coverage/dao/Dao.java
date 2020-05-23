@@ -1,5 +1,8 @@
 package io.salimchami.jacoco.coverage.dao;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class Dao {
 
   public void coveredByUnitTest() {

@@ -1,19 +1,22 @@
 package io.salimchami.jacoco.coverage.web;
 
 import io.salimchami.jacoco.coverage.domain.Domain;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
 public class Web {
 
-    public void coveredByUnitTest() {
-        final Domain domain = new Domain();
-        domain.coveredByUnitTest();
-        System.out.println("module 3 covered by unit test");
+    private final Domain domain;
+
+    public Web(Domain domain) {
+        this.domain = domain;
     }
 
-    public void coveredByIntegrationTest() {
-        final Domain domain = new Domain();
+    @GetMapping("/web")
+    public ResponseEntity<String> ohYeah() {
         domain.coveredByIntegrationTest();
-        System.out.println("module 3 covered by integration test");
+        return ResponseEntity.ok("oh yeah !");
     }
-
 }

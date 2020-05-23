@@ -13,7 +13,8 @@
     <name>Tests coverage module</name>
 
     <properties>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../${project.xmlReportPaths}</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../${project.xmlReportPaths}
+        </sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
     <dependencies>
