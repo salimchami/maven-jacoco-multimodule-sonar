@@ -21,6 +21,6 @@ public class WebIT {
     public void integrationTest() throws Exception {
         mockMvc.perform(get("/api/web"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("oh yeah !"));
+                .andExpect(content().string("oh yeah ! it works !"));
     }
 }
