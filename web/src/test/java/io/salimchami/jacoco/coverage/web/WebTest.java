@@ -18,6 +18,6 @@ public class WebTest {
 
     @Test
     public void coveredByUnitTest() {
-        web.ohYeah();
+        web.coveredByUnitTest();
     }
 }
