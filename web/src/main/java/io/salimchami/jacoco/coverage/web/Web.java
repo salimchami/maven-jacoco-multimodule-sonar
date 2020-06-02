@@ -19,6 +19,14 @@ public class Web {
     @GetMapping("/web")
     public ResponseEntity<String> ohYeah() {
         domain.coveredByIntegrationTest();
-        return ResponseEntity.ok("oh yeah !");
+        return ResponseEntity.ok("oh yeah ! it works !");
+    }
+
+    public void coveredByUnitTest() {
+        System.out.println("this method is covered by unit test");
+    }
+
+    public void notCoveredByTests() {
+        System.out.println("this method is not covered");
     }
 }
